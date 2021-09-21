@@ -1,0 +1,199 @@
+/* Start CSS Variables */
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --main-p: hsla(0, 0%, 100%, 0.5);
+  --main-h: hsl(0, 0%, 95%);
+  --main-background: hsl(0, 0%, 95%);
+}
+/* End CSS Variables */
+
+/* Start global rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 15px;
+}
+@media (max-width: 1440px) {
+  body {
+    font-size: 13px;
+  }
+}
+/* End global rules */
+
+/* Start Page */
+.page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-background, hsl(0, 0%, 95%));
+}
+@media (max-width: 376px) {
+  .page {
+    height: 180vh;
+  }
+}
+/* End Page */
+
+/* Start Container */
+.container {
+  background-color: white;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  box-shadow: 0 5px 10px 0 #0000002b;
+}
+/* disktop */
+@media (max-width: 1440px) {
+  .container {
+    width: 1100px;
+    height: 550px;
+    padding: 50px 75px;
+  }
+}
+@media (min-width: 1441px) {
+  .container {
+    width: 1200px;
+    height: 600px;
+    padding: 60px 120px;
+  }
+}
+/* mobile  */
+@media (max-width: 376px) {
+  .container {
+    width: 100vw;
+    height: 200vh;
+    padding: 130px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* End Container */
+
+/* Start card */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 53px;
+}
+.card div {
+  height: calc(100% - 60px);
+}
+.card img {
+  width: 60px;
+}
+.card h2 {
+  padding: 30px 0;
+  color: var(--main-h, hsl(0, 0%, 95%));
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 3em;
+}
+.card p {
+  color: var(--main-p, hsla(0, 0%, 100%, 0.5));
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.6;
+  letter-spacing: 1.1px;
+}
+.card button {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  width: 150px;
+  height: 45px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: var(--main-background, hsl(0, 0%, 95%));
+  border: 3px solid var(--main-background, hsl(0, 0%, 95%));
+}
+.card button:hover {
+  background-color: transparent;
+  color: var(--main-background, hsl(0, 0%, 95%));
+}
+@media (min-width: 1440px) {
+  .card img {
+    width: 55px;
+  }
+  .card h2 {
+    padding: 27px 0;
+    font-size: 2.7em;
+  }
+  .card p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    letter-spacing: 1.1px;
+  }
+  .card button {
+    font-size: 1.1em;
+    width: 170px;
+    height: 50px;
+  }
+}
+@media (max-width: 376px) {
+  .card p {
+    margin-bottom: 50px;
+  }
+}
+/* End card */
+
+/* Start Sedans */
+.card-1 {
+  background-color: var(--Bright-orange);
+  border-radius: 10px 0 0 10px;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  -ms-border-radius: 10px 0 0 10px;
+  -o-border-radius: 10px 0 0 10px;
+}
+@media (max-width: 376px) {
+  .card-1 {
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+  }
+}
+/* End Sedans */
+
+/* Start Suvs */
+.card-2 {
+  background-color: var(--Dark-cyan);
+}
+/* End Suvs */
+
+/* Start Luxury */
+.card-3 {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+  -webkit-border-radius: 0 10px 10px 0;
+  -moz-border-radius: 0 10px 10px 0;
+  -ms-border-radius: 0 10px 10px 0;
+  -o-border-radius: 0 10px 10px 0;
+}
+@media (max-width: 376px) {
+  .card-3 {
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+  }
+}
+/* End Luxury */
